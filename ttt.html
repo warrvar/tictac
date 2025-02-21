@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic tac toe</title>
+    <style>
+        #field td{
+            width: 150px;
+            height: 150px;
+            border: solid pink 1px;
+         
+
+
+        }
+        h1{
+            color: lightcoral;
+        }
+        #start-button{
+            background-color:darksalmon;
+            border-color: rgb(216, 137, 111);
+            border-radius: 10px;
+            width: 150px;
+            height: 70px;
+            font-size: 20px;
+            color:white;
+
+        }
+    </style>
 </head>
 <body>
-    <h1 align="center">Tic tac toe</h1>
+    <h1 id="header" align="center">Tic tac toe</h1>
+    <table id="field" align="center">
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+    </table>
+    <div align="center">
+        <button id="start-button" onclick="">Start game</button>
+    </div>
+    <script src="ttt.js"></script>
 </body>
 </html>
