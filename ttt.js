@@ -2,7 +2,7 @@
 var counter = 0;
 var cells = document.querySelectorAll('#field td');
 var header = document.getElementById('header');
-
+const xPlayerDisplay = document.querySelector('xPlayerDisplay');
 
 function isVictory() {
     var combos = [
@@ -26,11 +26,12 @@ function isVictory() {
 
 function tap(event) {
     if (counter % 2 == 0) {
-        header.innerText = 'It is X turn';
-        event.target.innerHTML = '<img src="close.png" width=100>';
+        header.innerText = 'It is O turn';
+        event.target.innerHTML = '<img src="melody.png" width=100 bc:transparent>';
     }
     else {
-        event.target.innerHTML = '<img src="circle.png" width=100>';
+        header.innerText = 'It is X turn';
+        event.target.innerHTML = '<img src="kuromi.png" width=100>';
     }
 
     if (isVictory()) {

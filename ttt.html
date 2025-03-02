@@ -17,11 +17,19 @@
             font-weight: 400;
             font-style: normal;
         }
+        #field{
+            margin: 0 auto;
+            border: 4px solid pink;
+        }
+
         #field td{
+            
             width: 150px;
             height: 150px;
             border: solid pink 1px;
             text-align: center;
+            border-radius: 12px;
+            
         }
         header{
             display: flex;
@@ -29,26 +37,57 @@
             border: solid 2 px crimson;
             margin-bottom: 30px;
             width: 250px;
+            margin: 0 auto;
+        }
+        header .player{
+            background-color: rgb(248, 204, 204);
+            width: 80px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 12px;
+            color: rgb(241, 118, 118);
+            border:rgb(248, 204, 204) solid 4 px;
+            opacity: 0.5;
+            transition: 0.3s;
+            margin-top: 16px;
         }
         h1{
-            color: lightcoral;
+            color: rgb(236, 113, 113);
             font-style: 50px;
         }
         #start-button{
-            background-color:darksalmon;
-            border-color: rgb(216, 137, 111);
+            background-color:rgb(243, 133, 133);
+            border: none;
             border-radius: 10px;
             width: 150px;
             height: 70px;
             font-size: 20px;
             color:white;
+            box-shadow: 9px 4px 4px rgb(240, 91, 91);
 
+        
+        }
+        header .player:hover{
+            border: solid 4px rgb(241, 118, 118); ;
+        }
+        header .player-active{
+            opacity: 1;
+            border: rgb(235, 179, 179) solid 4 px;
+        }
+        .header #xPlayerDisplay{
+            color: white; 
+    
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="player" id="xPlayerDisplay"> X </div>
+        <div class="player player-active" id="xPlayerDisplay"> X </div>
         <h1 id="header" align="center">Tic tac toe</h1>
         <div class="player" id="oPlayerDisplay">O</div>
     </header>
