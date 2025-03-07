@@ -29,6 +29,7 @@
             border: solid pink 1px;
             text-align: center;
             border-radius: 12px;
+            cursor: pointer;
             
         }
         header{
@@ -69,8 +70,11 @@
             font-size: 20px;
             color:white;
             box-shadow: 9px 4px 4px rgb(240, 91, 91);
-
-        
+            cursor: pointer;
+            visibility: hidden;
+        }
+        #start-button:hover{
+            color: palevioletred;
         }
         header .player:hover{
             border: solid 4px rgb(241, 118, 118); ;
@@ -83,13 +87,18 @@
             color: white; 
     
         }
+        .header #oPlayerDisplay{
+            color: white; 
+    
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="player player-active" id="xPlayerDisplay"> X </div>
         <h1 id="header" align="center">Tic tac toe</h1>
-        <div class="player" id="oPlayerDisplay">O</div>
+        <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')"> X </div>
+        <h3 id="header" align="center">Choose</h3>
+        <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')" >O</div>
     </header>
     <table id="field" align="center">
         <tr>
@@ -109,7 +118,7 @@
         </tr>
     </table>
     <div align="center">
-        <button id="start-button" onclick="startGame()">Start game</button>
+        <button id="start-button" >Restart</button>
     </div>
     <script src="ttt.js"></script>
 </body>
