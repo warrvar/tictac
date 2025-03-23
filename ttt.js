@@ -1,5 +1,5 @@
 
-var counter = 0;
+
 var cells = document.querySelectorAll('#field td');
 var header = document.getElementById('header');
 let player = 'X'
@@ -76,7 +76,7 @@ function tap(event) {
             header.innerText = 'X is winner!';
             
         }
-        start-button.style.visibility == 'visible';
+       
         else {
             header.innerText = 'O is winner!';
             
@@ -87,7 +87,7 @@ function tap(event) {
         header.innerText = 'Draw!';
        
     }
-    start-button.style.visibility == 'visible';
+    
     counter++;
     event.target.removeEventListener('click', tap);
 }

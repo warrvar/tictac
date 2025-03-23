@@ -33,17 +33,23 @@
             
         }
         header{
+            border: solid 2 px crimson;
+            margin-bottom: 25px;
+            width: 250px;
+            margin: 0 auto;
+        }
+        header .players{
             display: flex;
             justify-content: space-between;
             border: solid 2 px crimson;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             width: 250px;
             margin: 0 auto;
         }
         header .player{
             background-color: rgb(248, 204, 204);
-            width: 80px;
-            height: 65px;
+            width: 220px;
+            height: 55px;
             display: flex;
             align-items: center;
             justify-content:center ;
@@ -59,7 +65,12 @@
         }
         h1{
             color: rgb(236, 113, 113);
-            font-style: 50px;
+            font-size: 50px;
+        }
+        h3{
+            font-size: 40px;
+            
+            margin: 14px 10px 0px 10px;
         }
         #start-button{
             background-color:rgb(243, 133, 133);
@@ -96,9 +107,12 @@
 <body>
     <header>
         <h1 id="header" align="center">Tic tac toe</h1>
-        <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')"> X </div>
-        <h3 id="header" align="center">Choose</h3>
-        <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')" >O</div>
+        <div class="players">
+            <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')"> X </div>
+            <h3 id="header" align="center">Choose</h3>
+            <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')" >O</div>
+        </div>
+       
     </header>
     <table id="field" align="center">
         <tr>
